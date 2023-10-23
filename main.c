@@ -1,19 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int ebobs(a,b)
+
+int func(a,b) // this function calculate the gcd
 {
-    int ebob;
+    int gcd;
     if(a>b)
     {
         for(int i=1; i<=b; i++)
         {
             if(a%i==0 && b%i==0)
-                ebob=i;
+                gcd=i;
 
 
         }
-        return ebob;
+        return gcd;
 
 
     }
@@ -22,14 +23,14 @@ int ebobs(a,b)
         for(int i=1; i<=a; i++)
         {
             if(a%i==0 && b%i==0)
-                ebob=i;
+                gcd=i;
 
 
         }
-        return ebob;
+        return gcd;
 
     }
-    else
+    else // they are equal
     {
         return a;
     }
@@ -37,15 +38,15 @@ int ebobs(a,b)
 }
 int main()
 {
-    int a;
-    int b;
-    int c;
-    printf("ebob ve ekokunu ogrenmek isteginiz 2 sayiyi gir:\n ");
+    int a; // this is for first number
+    int b; // this is for second number
+    int c; // this for gcd
+    printf("input 2 numbers:\n");
     scanf("%d%d",&a,&b);
-    c=ebobs(a,b);
-    printf("ebob: %d\n",c);
-    int ekok=a*b/c;
-    printf("ekok: %d\n",ekok);
+    c=func(a,b);
+    printf("gcd: %d\n",c);
+    int lcm=a*b/c;
+    printf("lcm: %d\n",lcm);
 
 
 
