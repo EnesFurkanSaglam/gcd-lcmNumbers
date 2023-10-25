@@ -45,7 +45,7 @@ int main()
     scanf("%d%d",&a,&b);
     c=func(a,b);
     printf("gcd: %d\n",c);
-    int lcm=a*b/c;
+    int lcm=a*b/c; //lcm = number1 * number2 / gcd
     printf("lcm: %d\n",lcm);
 
 
